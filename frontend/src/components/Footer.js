@@ -1,6 +1,11 @@
+import { Link, useLocation } from "react-router-dom";
+
 function Footer() {
+
+  const location = useLocation().pathname
+
     return (
-        <footer className="py-10 bg-base-200 text-base-content border-t-2 mt-6">
+        <footer className={`py-10 bg-base-200 text-base-content border-t-2 mt-6 ${location === "/login" || location === "/register" ? "hidden":"block"}`}>
           <div className="container footer">
             <div>
               <p className=" font-semibold italic text-xl">BlitzBiz</p>

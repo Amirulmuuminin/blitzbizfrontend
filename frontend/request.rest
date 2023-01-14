@@ -4,19 +4,50 @@ GET http://localhost:5000/users
 GET http://localhost:5000/users/1
 
 ###
+DELETE  http://localhost:5000/users/2
+
+###
 POST http://localhost:5000/users/
 Content-Type: application/json
 
 {
     "id": 1,
-    "nama_user": "Hasan",
+    "nama_lengkap_user": "Muhammad Fachrul Hasan Mujtahid",
+    "nama_user": "Aksara",
     "email_user": "fachrul.hasan@gmail.com",
     "password_user": "test123",
-    "gambar_user": "",
+    "gambar_user": "https://linketo.fra1.cdn.digitaloceanspaces.com/2880-16710095630.jpg",
+    "status_user": "Aktif",
+    "peran_user": "Pengguna",
+    "verifikasi_user": "Terverifikasi",
+}
+
+###
+POST http://localhost:5000/users/
+Content-Type: application/json
+
+{
+    "nama_lengkap_user": "Muhammad Fachrul Hasan Mujtahid",
+    "nama_user": "test",
+    "email_user": "fachrul.hasan@gmail.com",
+    "password_user": "test123",
+    "gambar_user": "https://linketo.fra1.cdn.digitaloceanspaces.com/2880-16710095630.jpg",
     "status_user": "Aktif",
     "peran_user": "Pengguna",
     "verifikasi_user": "Belum terverifikasi"
 }
 
 ###
-DELETE http://localhost:5000/users/1
+PATCH http://localhost:5000/users/1
+Content-Type: application/json
+
+{
+    "nama_lengkap_user": "Muhammad Fachrul Hasan Mujtahid",
+    "nama_user": "aksara",
+    "email_user": "fachrul.hasan@gmail.com",
+    "password_user": "123",
+    "gambar_user": "https://linketo.fra1.cdn.digitaloceanspaces.com/2880-16710095630.jpg",
+    "status_user": "Aktif",
+    "peran_user": "Pengguna",
+    "verifikasi_user": "Terverifikasi"
+}
